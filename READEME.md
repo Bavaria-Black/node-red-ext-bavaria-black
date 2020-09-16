@@ -1,0 +1,1 @@
+# Library with convinience funtion for Node-RED
