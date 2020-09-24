@@ -3,7 +3,7 @@ const bavaria = require('../src/index.js');
 
 var utils = bavaria.utils;
 
-describe('Observer tests', () => {
+describe('Utils.Map tests', () => {
     
     it('.5 should be 50', () => {
         var result = utils.map(0.5, 0, 1, 0, 100);
