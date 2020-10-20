@@ -1,6 +1,6 @@
 {
   "name": "node-red-ext-bavaria-black",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Library for convenience methods used in Node-RED",
   "main": "./src/index.js",
   "scripts": {
