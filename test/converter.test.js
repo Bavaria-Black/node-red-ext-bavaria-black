@@ -13,3 +13,30 @@ describe('XY to RGB tests', () => {
         assert.equal(result.b, 252);
     });
 });
+
+describe('HEX to RGB tests', () => {
+    
+    it('#555 be 85,85,85', () => {
+        var result = converter.hexToRgb("#555");
+        
+        assert.equal(result.r, 85);
+        assert.equal(result.g, 85);
+        assert.equal(result.b, 85);
+    });
+    
+    it('#555555 be 85,85,85', () => {
+        var result = converter.hexToRgb("#555555");
+
+        assert.equal(result.r, 85);
+        assert.equal(result.g, 85);
+        assert.equal(result.b, 85);
+    });
+    
+    it('#5555 be 0,0,0', () => {
+        var result = converter.hexToRgb("#5555");
+        
+        assert.equal(result.r, 0);
+        assert.equal(result.g, 0);
+        assert.equal(result.b, 0);
+    });
+});
