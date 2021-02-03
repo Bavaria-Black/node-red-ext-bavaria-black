@@ -50,7 +50,7 @@ module.exports = {
                 r: 0,
                 g: 0,
                 b: 0
-            }
+            };
         }
 
         var int16 = parseInt(hex, 16);
@@ -58,6 +58,6 @@ module.exports = {
             r: (int16 >> 16) & 255,
             g: (int16 >> 8) & 255,
             b: int16 & 255
-        }
+        };
     }
 };

@@ -9,6 +9,10 @@
   "keywords": ["node-red", "bavaria-black"],
   "author": "Bavaria Black",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bavaria-Black/node-red-ext-bavaria-black"
+  },
   "devDependencies": {
     "mocha": "^8.1.3"
   }
