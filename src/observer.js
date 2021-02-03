@@ -2,7 +2,7 @@ module.exports = {
     _idCounter: 0,
     _subs: [],
     register : function(topic, callback){
-        var id = this._idCounter++
+        var id = this._idCounter++;
         this._subs.push({
             id: id,
             topic: topic,
@@ -27,7 +27,7 @@ module.exports = {
     notify: function(topic, msg) {
         this._subs.forEach(element => {
             if(element.topic === topic) {
-                element.callback(msg)
+                element.callback(msg);
             }
         });
     }
