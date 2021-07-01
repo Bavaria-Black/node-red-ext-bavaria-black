@@ -17,7 +17,7 @@ describe('Observer tests', () => {
 
         observer.notify("leberkas", "555");
 
-        assert.equal(result, "555");
+        assert.strictEqual(result, "555");
     });
 
     it('should receive 1 notification', () => {
@@ -30,7 +30,7 @@ describe('Observer tests', () => {
         observer.notify("leberkas", "555");
         observer.notify("blub", "666");
 
-        assert.equal(result, "555");
+        assert.strictEqual(result, "555");
     });
 
     it('should receive 2 single notifications', () => {
@@ -48,24 +48,24 @@ describe('Observer tests', () => {
         observer.notify("leberkas", "555");
         observer.notify("blub", "666");
 
-        assert.equal(observer._subs.length, 2);
-        assert.equal(result1, "555");
-        assert.equal(result2, "666");
+        assert.strictEqual(observer._subs.length, 2);
+        assert.strictEqual(result1, "555");
+        assert.strictEqual(result2, "666");
     });
     it('register and unregister', () => {
         var a = observer.register("leberkas", function(msg){});
         var b = observer.register("blub", function(msg){});
 
-        assert.equal(observer._subs.length, 2);
+        assert.strictEqual(observer._subs.length, 2);
 
         observer.unregister(a);
-        assert.equal(observer._subs.length, 1);
+        assert.strictEqual(observer._subs.length, 1);
 
         observer.unregister(a);
-        assert.equal(observer._subs.length, 1);
+        assert.strictEqual(observer._subs.length, 1);
 
         observer.unregister(b);
-        assert.equal(observer._subs.length, 0);
+        assert.strictEqual(observer._subs.length, 0);
     });
     it('should not be notified', () => {
         var result = "";
@@ -75,6 +75,6 @@ describe('Observer tests', () => {
 
         observer.unregister(a);
         observer.notify("leberkas", "555");
-        assert.equal("", result);
+        assert.strictEqual("", result);
     });
 });
